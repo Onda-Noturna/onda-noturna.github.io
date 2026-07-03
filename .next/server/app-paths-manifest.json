@@ -1,0 +1,17 @@
+{
+  "/page": "app/page.js",
+  "/about/page": "app/about/page.js",
+  "/manifesto/page": "app/manifesto/page.js",
+  "/atuacao/page": "app/atuacao/page.js",
+  "/musica/page": "app/musica/page.js",
+  "/eventos/page": "app/eventos/page.js",
+  "/radio/page": "app/radio/page.js",
+  "/projetos/page": "app/projetos/page.js",
+  "/labs/page": "app/labs/page.js",
+  "/formacao/page": "app/formacao/page.js",
+  "/noticias/page": "app/noticias/page.js",
+  "/loja/page": "app/loja/page.js",
+  "/apoie/page": "app/apoie/page.js",
+  "/voluntariado/page": "app/voluntariado/page.js",
+  "/contato/page": "app/contato/page.js"
+}
