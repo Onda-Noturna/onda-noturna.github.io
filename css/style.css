@@ -1,0 +1,825 @@
+/* ==========================================================================
+   Onda Noturna — Folha de estilos global
+   --------------------------------------------------------------------------
+   Identidade visual portada do projeto original (Next.js + TailwindCSS):
+   - Fundo escuro #090909 · Primária #D90429 · Texto #F5F5F5
+   - Títulos: Bebas Neue · Texto: Inter (Google Fonts via CDN)
+   Para alterar cores/fontes, edite apenas as variáveis em :root.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --color-primary: #d90429;
+  --color-primary-dark: #8b0000;
+  --color-dark: #090909;
+  --color-surface: #141414;
+  --color-dark-gray: #202020;
+  --color-light: #f5f5f5;
+  --color-light-80: rgba(245, 245, 245, 0.8);
+  --color-light-60: rgba(245, 245, 245, 0.6);
+  --color-light-45: rgba(245, 245, 245, 0.45);
+  --color-white: #ffffff;
+
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --shadow-glow: 0 10px 34px rgba(217, 4, 41, 0.28);
+  --radius: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Base
+   -------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+main {
+  flex: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* --------------------------------------------------------------------------
+   Utilitários (equivalentes ao Tailwind do projeto original)
+   -------------------------------------------------------------------------- */
+
+.container-custom {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-custom {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-custom {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Botões (variantes portadas do componente Button.tsx)
+   -------------------------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--color-light);
+}
+
+.btn-ghost:hover {
+  background-color: var(--color-dark-gray);
+}
+
+.btn-sm { padding: 0.375rem 0.75rem; font-size: 0.875rem; }
+.btn-md { padding: 0.5rem 1rem;     font-size: 1rem;     }
+.btn-lg { padding: 0.75rem 1.5rem;  font-size: 1.125rem; }
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* --------------------------------------------------------------------------
+   Logo
+   -------------------------------------------------------------------------- */
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.logo-mark {
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary);
+  border-radius: var(--radius);
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.logo-text {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  letter-spacing: 0.06em;
+  color: var(--color-light);
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   Navbar (portada do Navbar.tsx — sticky, blur, menu mobile animado)
+   -------------------------------------------------------------------------- */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: rgba(32, 32, 32, 0.95);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--color-dark-gray);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .navbar-inner {
+    height: 5rem;
+  }
+}
+
+.nav-desktop {
+  display: none;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+@media (min-width: 1024px) {
+  .nav-desktop {
+    display: flex;
+  }
+}
+
+.nav-link {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-light);
+  text-decoration: none;
+  border-radius: 0.25rem;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-primary);
+}
+
+.menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  background: transparent;
+  border: none;
+  border-radius: 0.25rem;
+  color: var(--color-light);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.menu-toggle:hover {
+  color: var(--color-primary);
+}
+
+@media (min-width: 1024px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.28s ease;
+}
+
+.mobile-menu.open {
+  max-height: 34rem;
+}
+
+.mobile-menu-inner {
+  display: none;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--color-dark-gray);
+}
+
+.mobile-menu.open .mobile-menu-inner {
+  display: flex;
+}
+
+@media (min-width: 1024px) {
+  .mobile-menu-inner {
+    display: none !important;
+  }
+}
+
+.mobile-menu .nav-link {
+  display: block;
+  font-size: 1rem;
+  border-radius: var(--radius);
+}
+
+.mobile-menu .nav-link:hover {
+  background-color: var(--color-dark);
+}
+
+/* --------------------------------------------------------------------------
+   Hero (página inicial)
+   -------------------------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 5rem 0 4rem;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 7rem 0 5rem;
+  }
+}
+
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+.hero::before {
+  width: 34rem;
+  height: 34rem;
+  top: -14rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(217, 4, 41, 0.22), transparent 65%);
+}
+
+.hero::after {
+  width: 26rem;
+  height: 26rem;
+  bottom: -16rem;
+  right: -8rem;
+  background: radial-gradient(circle, rgba(139, 0, 0, 0.25), transparent 65%);
+}
+
+.hero > .container-custom {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(217, 4, 41, 0.5);
+  border-radius: 999px;
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: clamp(3.25rem, 9vw, 6rem);
+  margin-bottom: 1.25rem;
+}
+
+.hero p {
+  max-width: 44rem;
+  margin: 0 auto 2.25rem;
+  color: var(--color-light-80);
+  font-size: 1.125rem;
+}
+
+@media (min-width: 768px) {
+  .hero p {
+    font-size: 1.25rem;
+  }
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   Mensagem de construção (portada do ConstructionMessage.tsx)
+   -------------------------------------------------------------------------- */
+
+.construction {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.construction-badge {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid rgba(217, 4, 41, 0.5);
+  border-radius: 999px;
+  color: var(--color-primary);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.construction-icon {
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+}
+
+.construction-icon svg {
+  width: 4rem;
+  height: 4rem;
+}
+
+.construction h1 {
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  color: var(--color-light);
+  margin-bottom: 1rem;
+}
+
+.construction p {
+  max-width: 42rem;
+  margin-bottom: 2rem;
+  color: var(--color-light-80);
+  font-size: 1.125rem;
+}
+
+@media (min-width: 768px) {
+  .construction p {
+    font-size: 1.25rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Rodapé (portado do Footer.tsx)
+   -------------------------------------------------------------------------- */
+
+.site-footer {
+  background-color: var(--color-dark);
+  border-top: 1px solid var(--color-dark-gray);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 3rem 0;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.footer-description {
+  color: var(--color-light-80);
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  max-width: 20rem;
+}
+
+.footer-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+  color: var(--color-light);
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li + li {
+  margin-top: 0.5rem;
+}
+
+.footer-links a,
+.footer-social a {
+  color: var(--color-light-80);
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+  color: var(--color-primary);
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-social a {
+  display: inline-flex;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.footer-bottom {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--color-dark-gray);
+  text-align: center;
+  color: var(--color-light-60);
+  font-size: 0.875rem;
+}
+
+/* --------------------------------------------------------------------------
+   Página de links (links.html) — central de links / bio
+   -------------------------------------------------------------------------- */
+
+.bio-page::before,
+.bio-page::after {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+.bio-page::before {
+  width: 30rem;
+  height: 30rem;
+  top: -12rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(217, 4, 41, 0.18), transparent 65%);
+}
+
+.bio-page::after {
+  width: 26rem;
+  height: 26rem;
+  bottom: -14rem;
+  right: -10rem;
+  background: radial-gradient(circle, rgba(139, 0, 0, 0.22), transparent 65%);
+}
+
+.bio-wrap {
+  width: 100%;
+  max-width: 30rem;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 4rem;
+}
+
+.bio-header {
+  text-align: center;
+  margin-bottom: 2.25rem;
+}
+
+.bio-avatar {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 1.25rem;
+}
+
+.bio-avatar-mark,
+.bio-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary);
+  border-radius: 24px;
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-glow);
+}
+
+.bio-avatar::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 30px;
+  border: 2px solid rgba(217, 4, 41, 0.55);
+  animation: bio-pulse 2.6s ease-out infinite;
+}
+
+@keyframes bio-pulse {
+  0%   { opacity: 0.8; transform: scale(0.96); }
+  70%  { opacity: 0;   transform: scale(1.12); }
+  100% { opacity: 0;   transform: scale(1.12); }
+}
+
+.bio-tagline {
+  color: var(--color-primary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.bio-name {
+  font-size: 2.75rem;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.6rem;
+}
+
+.bio-desc {
+  color: var(--color-light-80);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 24rem;
+  margin: 0 auto;
+}
+
+.bio-divider {
+  height: 1px;
+  border: none;
+  margin: 1.75rem 0;
+  background: linear-gradient(90deg, transparent, rgba(217, 4, 41, 0.55), transparent);
+}
+
+.bio-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.bio-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.1rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-dark-gray);
+  border-radius: 14px;
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease,
+              box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.bio-link:hover {
+  transform: translateY(-3px);
+  border-color: rgba(217, 4, 41, 0.65);
+  background-color: #181818;
+  box-shadow: var(--shadow-glow);
+}
+
+.bio-link:active {
+  transform: scale(0.98);
+}
+
+.bio-link-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background-color: rgba(217, 4, 41, 0.14);
+  color: var(--color-primary);
+  font-size: 1.35rem;
+}
+
+.bio-link-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.bio-link-title {
+  font-weight: 600;
+  font-size: 0.98rem;
+  color: var(--color-light);
+}
+
+.bio-link-subtitle {
+  font-size: 0.78rem;
+  color: var(--color-light-45);
+  margin-top: 0.15rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bio-link-arrow {
+  margin-left: auto;
+  color: var(--color-light-45);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.bio-link:hover .bio-link-arrow {
+  transform: translateX(4px);
+  color: var(--color-primary);
+}
+
+.bio-socials {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 2.25rem;
+}
+
+.bio-social {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-dark-gray);
+  border-radius: 50%;
+  color: var(--color-light-80);
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.bio-social:hover {
+  color: var(--color-primary);
+  border-color: rgba(217, 4, 41, 0.65);
+  transform: translateY(-2px);
+}
+
+.bio-footer {
+  text-align: center;
+  margin-top: 2.5rem;
+  color: var(--color-light-45);
+  font-size: 0.8rem;
+}
+
+.bio-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.bio-footer a:hover {
+  color: var(--color-primary);
+}
+
+.bio-footer .heart {
+  display: inline-block;
+  color: var(--color-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Animações de entrada (substituto leve do Framer Motion)
+   -------------------------------------------------------------------------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

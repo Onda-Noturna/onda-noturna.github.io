@@ -1,242 +1,152 @@
-# Onda Noturna
+# Onda Noturna 🌊
 
-Portal da Onda Noturna - Cultura, Música e Comunidade
+Portal da **Onda Noturna** — Cultura, Música e Comunidade.
 
-## 📋 Sobre o Projeto
-
-Projeto desenvolvido com Next.js 15, TypeScript e TailwindCSS, seguindo as melhores práticas de arquitetura e organização de código. O objetivo é criar uma base sólida e escalável para o portal da Onda Noturna.
-
-## 🚀 Stack Tecnológica
-
-- **Framework**: Next.js 15 (App Router)
-- **Linguagem**: TypeScript
-- **Estilização**: TailwindCSS
-- **Componentes UI**: shadcn/ui
-- **Ícones**: Lucide React
-- **Animações**: Framer Motion
-- **Qualidade de Código**: ESLint, Prettier, Husky, lint-staged
-
-## 📁 Estrutura de Pastas
-
-```
-onda-noturna.github.io/
-├── src/
-│   ├── app/                    # Rotas e páginas (App Router)
-│   │   ├── about/             # Página Sobre
-│   │   ├── manifesto/         # Página Manifesto
-│   │   ├── atuacao/           # Página Atuação
-│   │   ├── musica/            # Página Música
-│   │   ├── eventos/           # Página Eventos
-│   │   ├── radio/             # Página Rádio
-│   │   ├── projetos/          # Página Projetos
-│   │   ├── labs/              # Página Labs
-│   │   ├── formacao/          # Página Formação
-│   │   ├── noticias/          # Página Notícias
-│   │   ├── loja/              # Página Loja
-│   │   ├── apoie/             # Página Apoie
-│   │   ├── voluntariado/      # Página Voluntariado
-│   │   ├── contato/           # Página Contato
-│   │   ├── layout.tsx         # Layout global
-│   │   ├── page.tsx           # Página Home
-│   │   └── sitemap.ts         # Sitemap dinâmico
-│   ├── components/            # Componentes reutilizáveis
-│   │   ├── ui/                # Componentes UI base (Button, etc)
-│   │   ├── layout/            # Componentes de layout (Navbar, Footer)
-│   │   └── common/            # Componentes comuns (Logo, ConstructionMessage)
-│   ├── lib/                   # Funções utilitárias
-│   ├── hooks/                 # Custom hooks
-│   ├── types/                 # Definições de tipos TypeScript
-│   ├── styles/                # Estilos globais
-│   │   └── globals.css        # CSS global com variáveis e utilitários
-│   ├── config/                # Arquivos de configuração
-│   │   └── site.config.ts     # Configurações do site
-│   └── assets/                # Assets do projeto
-│       ├── logos/
-│       ├── icons/
-│       ├── images/
-│       ├── backgrounds/
-│       └── illustrations/
-├── public/                    # Arquivos estáticos
-│   ├── logos/
-│   ├── icons/
-│   ├── images/
-│   ├── backgrounds/
-│   ├── illustrations/
-│   ├── robots.txt
-│   └── manifest.webmanifest
-├── api/                       # API routes (futuro)
-├── cms/                       # Integração com CMS (futuro)
-├── database/                  # Banco de dados (futuro)
-├── auth/                      # Autenticação (futuro)
-├── services/                  # Serviços externos (futuro)
-├── store/                     # Gerenciamento de estado (futuro)
-├── scripts/                   # Scripts utilitários
-├── .husky/                    # Git hooks
-├── tailwind.config.ts         # Configuração do TailwindCSS
-├── postcss.config.js          # Configuração do PostCSS
-├── tsconfig.json              # Configuração do TypeScript
-├── next.config.js             # Configuração do Next.js
-├── .eslintrc.json             # Configuração do ESLint
-├── .prettierrc                # Configuração do Prettier
-├── .prettierignore            # Arquivos ignorados pelo Prettier
-├── .lintstagedrc.json         # Configuração do lint-staged
-└── package.json               # Dependências e scripts
-```
-
-## 🎨 Tema e Cores
-
-### Paleta de Cores
-
-- **Primária**: `#D90429` (Vermelho vibrante)
-- **Secundária**: `#8B0000` (Vermelho escuro)
-- **Preto**: `#090909`
-- **Cinza**: `#202020`
-- **Branco**: `#F5F5F5`
-
-### Tipografia
-
-- **Títulos**: Bebas Neue
-- **Texto**: Inter
-
-## 🛠️ Instalação
-
-### Pré-requisitos
-
-- Node.js 18+ instalado
-- npm ou yarn
-
-### Passos
-
-1. Clone o repositório:
-```bash
-git clone https://github.com/Onda-Noturna/onda-noturna.github.io.git
-cd onda-noturna.github.io
-```
-
-2. Instale as dependências:
-```bash
-npm install
-```
-
-3. Execute o projeto em desenvolvimento:
-```bash
-npm run dev
-```
-
-4. Acesse [http://localhost:3000](http://localhost:3000) no seu navegador.
-
-## 📝 Scripts Disponíveis
-
-- `npm run dev` - Inicia o servidor de desenvolvimento
-- `npm run build` - Cria a build de produção
-- `npm run start` - Inicia o servidor de produção
-- `npm run lint` - Executa o linter ESLint
-- `npm run format` - Formata o código com Prettier
-- `npm run prepare` - Instala os git hooks do Husky
-
-## 🎯 Funcionalidades Implementadas
-
-### Estrutura Base
-- ✅ Next.js 15 com App Router
-- ✅ TypeScript configurado
-- ✅ TailwindCSS com tema personalizado
-- ✅ CSS Variables para tema claro/escuro
-- ✅ Google Fonts (Bebas Neue, Inter)
-
-### Componentes
-- ✅ Navbar responsiva com menu mobile
-- ✅ Footer com links e redes sociais
-- ✅ Logo reutilizável
-- ✅ Botão com variantes e animações
-- ✅ Mensagem de "Página em construção"
-
-### Páginas
-- ✅ Home
-- ✅ Sobre
-- ✅ Manifesto
-- ✅ Atuação
-- ✅ Música
-- ✅ Eventos
-- ✅ Rádio
-- ✅ Projetos
-- ✅ Labs
-- ✅ Formação
-- ✅ Notícias
-- ✅ Loja
-- ✅ Apoie
-- ✅ Voluntariado
-- ✅ Contato
-
-### SEO e Performance
-- ✅ Metadata global e por página
-- ✅ Open Graph configurado
-- ✅ Twitter Cards
-- ✅ Sitemap dinâmico
-- ✅ Robots.txt
-- ✅ Manifest PWA
-- ✅ Lazy Loading de imagens
-- ✅ Fontes otimizadas com next/font
-
-### Qualidade de Código
-- ✅ ESLint configurado
-- ✅ Prettier configurado
-- ✅ Husky com git hooks
-- ✅ lint-staged para pré-commit
-- ✅ TypeScript strict mode
-
-### Acessibilidade
-- ✅ ARIA labels
-- ✅ Navegação por teclado
-- ✅ Contraste adequado
-- ✅ Landmarks semânticos
-
-## 🔧 Convenções
-
-### Nomenclatura
-- **Arquivos**: camelCase para arquivos TypeScript/JavaScript
-- **Componentes**: PascalCase
-- **Pastas**: kebab-case
-- **Classes CSS**: Seguem convenção TailwindCSS
-
-### Estrutura de Componentes
-- Componentes de layout em `components/layout/`
-- Componentes UI base em `components/ui/`
-- Componentes comuns em `components/common/`
-
-### Aliases de Importação
-- `@/` → `src/`
-- `@/components/*` → `src/components/*`
-- `@/lib/*` → `src/lib/*`
-- `@/hooks/*` → `src/hooks/*`
-- `@/types/*` → `src/types/*`
-- `@/config/*` → `src/config/*`
-- `@/assets/*` → `src/assets/*`
-
-## 📱 Responsividade
-
-- Mobile First
-- Breakpoints:
-  - sm: 640px
-  - md: 768px
-  - lg: 1024px
-  - xl: 1280px
-
-## 🚀 Deploy
-
-O projeto está configurado para deploy no GitHub Pages. Para fazer o deploy:
-
-1. Configure o repositório no GitHub
-2. Ative o GitHub Pages nas configurações
-3. O site será automaticamente deployado
-
-## 🤝 Contribuindo
-
-Contribuições são bem-vindas! Por favor, siga as convenções do projeto e certifique-se de que o código passa por todos os checks de qualidade antes de enviar um PR.
-
-## 📄 Licença
-
-Todos os direitos reservados © {new Date().getFullYear()} Onda Noturna
+Site **100% estático**: HTML + CSS + JavaScript vanilla. Sem Node.js, sem
+build, sem banco de dados, sem servidor. Publicado direto no GitHub Pages.
 
 ---
 
-Desenvolvido com ❤️ pela equipe Onda Noturna
+## 📁 Estrutura de arquivos
+
+```text
+├── index.html            # Página inicial
+├── links.html            # ⭐ Central de Links (estilo Linktree)
+├── about.html            # Sobre
+├── manifesto.html        # Manifesto
+├── atuacao.html          # Atuação
+├── musica.html           # Música
+├── eventos.html          # Eventos
+├── radio.html            # Rádio
+├── projetos.html         # Projetos
+├── labs.html             # Labs
+├── formacao.html         # Formação
+├── noticias.html         # Notícias
+├── loja.html             # Loja
+├── apoie.html            # Apoie
+├── voluntariado.html     # Voluntariado
+├── contato.html          # Contato
+├── 404.html              # Página de erro (usada automaticamente pelo GitHub Pages)
+├── css/
+│   └── style.css         # Toda a identidade visual (cores, fontes, componentes)
+├── js/
+│   └── main.js           # Navbar, rodapé, menu mobile e página de links
+├── data/
+│   └── content.js        # ⭐ TODO O CONTEÚDO EDITÁVEL DO SITE
+├── assets/
+│   ├── icons/            # Favicon e ícone do app (SVG)
+│   └── images/           # Suas imagens (coloque aqui)
+├── manifest.webmanifest  # Configuração de PWA/ícone
+├── robots.txt / sitemap.xml / .nojekyll
+└── README.md
+```
+
+## ✏️ Como editar o conteúdo
+
+Quase tudo está centralizado em **`data/content.js`**. Abra o arquivo num
+editor de texto simples, altere o que quiser, salve e recarregue o site.
+Não é preciso instalar nada nem executar nenhum comando.
+
+### Alterar links (menu, redes sociais e página links.html)
+
+1. Abra `data/content.js`.
+2. Edite as seções:
+   - **`navigation`** → itens do menu do topo e do rodapé;
+   - **`socials`** → redes sociais do rodapé;
+   - **`bio.links`** → botões grandes da página `links.html`:
+
+```js
+links: [
+  {
+    title: "Ouça nossa música",        // texto do botão
+    subtitle: "Playlists e lançamentos", // texto menor (opcional)
+    url: "https://open.spotify.com/...", // destino
+    icon: "spotify",                     // ícone (lista abaixo)
+  },
+]
+```
+
+Para usar um emoji no lugar do ícone, troque `icon:` por `emoji: "🎵"`.
+
+**Ícones disponíveis:** `instagram`, `facebook`, `youtube`, `spotify`,
+`whatsapp`, `github`, `music`, `calendar`, `megaphone`, `mail`, `heart`,
+`globe`, `radio`, `arrowRight`.
+
+### Alterar nome, slogan e descrição
+
+No mesmo arquivo, ajuste `bio.profile` (nome, tagline, descrição) e
+`site.description`. As letras do quadrado vermelho do logo ficam em
+`site.initials` e `bio.profile.initials`.
+
+## 🖼️ Como alterar imagens
+
+1. Copie sua imagem para `assets/images/`.
+2. Referencie sempre com caminho relativo, por exemplo `./assets/images/foto.jpg`.
+3. Para usar uma foto de perfil na página de links, preencha
+   `bio.profile.image` em `data/content.js`:
+
+```js
+profile: {
+  ...
+  image: "./assets/images/profile.jpg", // vazio "" = usa as iniciais "ON"
+}
+```
+
+O favicon fica em `assets/icons/favicon.svg` — substitua o arquivo mantendo
+o mesmo nome para atualizar em todo o site.
+
+## ▶️ Como executar localmente
+
+**Jeito mais simples:** dê dois cliques no `index.html`. Pronto.
+
+Se preferir um servidor local (recomendado para testar tudo):
+
+```bash
+# dentro da pasta do projeto, escolha UMA opção:
+python3 -m http.server 8000     # Python
+npx serve .                      # Node, se tiver instalado
+```
+
+Depois abra `http://localhost:8000` no navegador.
+
+## 🚀 Como publicar no GitHub Pages
+
+1. Faça push dos arquivos para a branch `main` do repositório
+   (`onda-noturna.github.io`).
+2. No GitHub, vá em **Settings → Pages**.
+3. Em **Source**, escolha *Deploy from a branch* → branch `main` → pasta `/ (root)`.
+4. Pronto: o site fica no ar em `https://onda-noturna.github.io`.
+
+Toda nova alteração enviada ao repositório publica automaticamente.
+O arquivo `.nojekyll` já está incluído para servir os arquivos exatamente
+como estão.
+
+> Se um dia o repositório mudar de nome (publicando em subpasta, tipo
+> `usuario.github.io/nome-do-repo/`), nada precisa ser alterado: todos os
+> caminhos internos já são relativos (`./css/style.css`, `./about.html`, ...).
+> Só atualize as URLs de `site.url`, `robots.txt` e `sitemap.xml`.
+
+## ❓ Onde mexer em cada coisa
+
+| Quero mudar...                    | Arquivo                          |
+|----------------------------------|----------------------------------|
+| Menu, links, redes sociais, bio  | `data/content.js`                |
+| Cores, fontes, espaçamentos      | `css/style.css` (variáveis em `:root`) |
+| Texto de uma página interna      | O próprio `.html` da página      |
+| Imagens                          | `assets/images/`                 |
+| Favicon / ícone                  | `assets/icons/favicon.svg`       |
+| Endereços para o Google          | `sitemap.xml` e `robots.txt`     |
+
+## 🎨 Identidade visual
+
+- **Cores:** fundo `#090909` · primária `#D90429` · texto `#F5F5F5`
+- **Fontes:** Bebas Neue (títulos) · Inter (texto) — carregadas via Google Fonts
+- Paleta e tipografia ficam nas variáveis CSS em `:root`, no topo de `style.css`.
+
+## 📄 Licença
+
+Todos os direitos reservados © Onda Noturna.
+
+---
+
+Desenvolvido com ❤️ pela equipe Onda Noturna.

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Central de Links | Onda Noturna</title>
+  <meta name="description" content="Todos os links oficiais da Onda Noturna em um só lugar: música, redes sociais, eventos e formas de apoiar o projeto.">
+  <meta name="theme-color" content="#D90429">
+  <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Onda Noturna">
+  <meta property="og:title" content="Central de Links | Onda Noturna">
+  <meta property="og:description" content="Todos os links oficiais da Onda Noturna em um só lugar.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Central de Links | Onda Noturna">
+  <meta name="twitter:description" content="Todos os links oficiais da Onda Noturna em um só lugar.">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="bio-page">
+
+  <main role="main">
+    <div class="bio-wrap">
+
+      <!-- Cabeçalho do perfil (valores vindos de data/content.js) -->
+      <header class="bio-header reveal">
+        <div class="bio-avatar" id="bio-avatar"></div>
+        <p class="bio-tagline" id="bio-tagline"></p>
+        <h1 class="bio-name" id="bio-name"></h1>
+        <p class="bio-desc" id="bio-desc"></p>
+      </header>
+
+      <hr class="bio-divider">
+
+      <!-- Botões principais (renderizados por js/main.js a partir de data/content.js) -->
+      <nav class="bio-links" id="bio-links" aria-label="Links principais"></nav>
+
+      <!-- Redes sociais compactas -->
+      <div class="bio-socials" id="bio-socials"></div>
+
+      <!-- Assinatura discreta -->
+      <footer class="bio-footer">
+        <p>
+          © <span data-year></span> Onda Noturna · Feito com
+          <span class="heart">♥</span> e muito café<br>
+          <a href="./index.html">onda-noturna.github.io</a>
+        </p>
+      </footer>
+
+    </div>
+  </main>
+
+  <script src="./data/content.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>

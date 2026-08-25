@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://onda-noturna.github.io/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://onda-noturna.github.io/about.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://onda-noturna.github.io/manifesto.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://onda-noturna.github.io/atuacao.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://onda-noturna.github.io/musica.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://onda-noturna.github.io/eventos.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://onda-noturna.github.io/radio.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://onda-noturna.github.io/projetos.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://onda-noturna.github.io/labs.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://onda-noturna.github.io/formacao.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://onda-noturna.github.io/noticias.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://onda-noturna.github.io/loja.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://onda-noturna.github.io/apoie.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://onda-noturna.github.io/voluntariado.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://onda-noturna.github.io/contato.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://onda-noturna.github.io/links.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+</urlset>

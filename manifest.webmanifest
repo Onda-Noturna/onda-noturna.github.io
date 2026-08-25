@@ -1,0 +1,19 @@
+{
+  "name": "Onda Noturna",
+  "short_name": "Onda Noturna",
+  "description": "Portal da Onda Noturna - Cultura, Música e Comunidade",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#090909",
+  "theme_color": "#D90429",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

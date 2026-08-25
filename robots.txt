@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://onda-noturna.github.io/sitemap.xml
+
+# Bloquear áreas administrativas
+Disallow: /admin/
+Disallow: /api/

@@ -1,8 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://onda-noturna.github.io/sitemap.xml
-
-# Bloquear páginas em construção
-Disallow: /admin/
-Disallow: /api/
