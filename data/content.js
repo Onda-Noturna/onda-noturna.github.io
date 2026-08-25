@@ -39,8 +39,10 @@ const SITE_DATA = {
   ],
 
   // Redes sociais exibidas no rodapé de todas as páginas.
-  // Ícones disponíveis: instagram, facebook, youtube, spotify, whatsapp,
-  // github, music, calendar, megaphone, mail, heart, globe, radio.
+  // Ícones disponíveis (catálogo visual: abra o arquivo icones.html):
+  // instagram, facebook, youtube, spotify, whatsapp, github, music,
+  // calendar, megaphone, mail, heart, globe, radio, mic, building,
+  // clipboard, arrowRight, menu, close.
   socials: [
     { name: "Instagram", url: "https://instagram.com/onda.noturna",          icon: "instagram" },
     //{ name: "Facebook",  url: "https://facebook.com/ondanoturna",           icon: "facebook" },
@@ -66,7 +68,7 @@ const SITE_DATA = {
     //   title     → texto principal do botão
     //   subtitle  → texto menor abaixo do título (opcional)
     //   url       → destino do link (interno "./pagina.html" ou externo)
-    //   icon      → nome de um ícone da lista acima
+    //   icon      → nome de um ícone (catálogo visual: abra icones.html)
     //   emoji     → opcional: use um emoji no lugar do ícone
     links: [
       {
@@ -85,19 +87,19 @@ const SITE_DATA = {
         title: "Pesquisa I",
         subtitle: "Cena Independente (Artistas)",
         url: "https://docs.google.com/forms/d/e/1FAIpQLSdVl-ppkv3QgO0P7z7Dz4eI8963x9LCrG-YeK0Kp5y6jtNLSg/viewform?usp=header",
-        icon: "",
+        icon: "mic",
       },
       {
         title: "Pesquisa II",
         subtitle: "Cena Independente (Casas de show)",
         url: "https://docs.google.com/forms/d/e/1FAIpQLSdK4JeufJTycCYqkh23_yFe0ZiwIgy46yaV7PA6CYvote_PAw/viewform?usp=header",
-        icon: "",
+        icon: "building",
       },
       {
         title: "Pesquisa III",
         subtitle: "Cena Independente (Produtores)",
         url: "https://docs.google.com/forms/d/e/1FAIpQLScuDsoAbMTDQd0VQGhUH9G-vFKQ90Cz3QaI9EYWZRIFO0aGeQ/viewform?usp=header",
-        icon: "",
+        icon: "megaphone",
       },
     ],
 

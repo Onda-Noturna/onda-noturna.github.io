@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Ícones | Onda Noturna</title>
+  <meta name="description" content="Catálogo visual dos ícones disponíveis para usar nos links do site da Onda Noturna.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#D90429">
+  <link rel="icon" type="image/png" href="./assets/icons/favicon.png">
+  <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- Navbar (montada por js/main.js com os dados de data/content.js) -->
+  <div id="site-navbar"></div>
+
+  <main role="main">
+    <section class="section">
+      <div class="container-custom">
+
+        <div style="max-width:44rem;margin-bottom:2rem;">
+          <span class="construction-badge">Guia de edição</span>
+          <h1 style="font-size:clamp(2.5rem,6vw,4rem);margin-bottom:0.75rem;">Ícones disponíveis</h1>
+          <p style="color:var(--color-light-80);">
+            Use o nome de um ícone no campo <code>icon</code> em
+            <strong>data/content.js</strong> (menu, rodapé e página de links).
+            Clique em um cartão abaixo para copiar o nome.
+          </p>
+        </div>
+
+        <!-- Cartões preenchidos pelo script abaixo, lendo js/main.js -->
+        <div class="icon-grid" id="icon-grid"></div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé (montado por js/main.js) -->
+  <div id="site-footer"></div>
+
+  <script src="./data/content.js"></script>
+  <script src="./js/main.js"></script>
+  <script>
+    (function () {
+      "use strict";
+      var grid = document.getElementById("icon-grid");
+      if (!grid || typeof window.ondaIconSvg !== "function") return;
+
+      window.ONDA_ICON_NAMES.forEach(function (name) {
+        var card = document.createElement("button");
+        card.type = "button";
+        card.className = "icon-card";
+        card.setAttribute("aria-label", "Copiar o nome do ícone " + name);
+        card.innerHTML =
+          window.ondaIconSvg(name, 28) +
+          '<span class="icon-name">' + name + "</span>" +
+          '<span class="icon-hint">copiar</span>';
+
+        card.addEventListener("click", function () {
+          function feedback() {
+            var hint = card.querySelector(".icon-hint");
+            hint.textContent = "copiado!";
+            card.classList.add("copied");
+            setTimeout(function () {
+              hint.textContent = "copiar";
+              card.classList.remove("copied");
+            }, 1400);
+          }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(name).then(feedback).catch(function () {});
+          } else {
+            // Fallback sem Clipboard API (ex.: file://)
+            var temp = document.createElement("textarea");
+            temp.value = name;
+            document.body.appendChild(temp);
+            temp.select();
+            try { document.execCommand("copy"); feedback(); } catch (e) {}
+            document.body.removeChild(temp);
+          }
+        });
+
+        grid.appendChild(card);
+      });
+    })();
+  </script>
+</body>
+</html>

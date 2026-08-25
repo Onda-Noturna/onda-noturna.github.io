@@ -12,6 +12,7 @@ build, sem banco de dados, sem servidor. Publicado direto no GitHub Pages.
 ```text
 ├── index.html            # Página inicial
 ├── links.html            # ⭐ Central de Links (estilo Linktree)
+├── icones.html           # Catálogo visual de ícones (clique copia o nome)
 ├── about.html            # Sobre
 ├── manifesto.html        # Manifesto
 ├── atuacao.html          # Atuação
@@ -68,9 +69,19 @@ links: [
 
 Para usar um emoji no lugar do ícone, troque `icon:` por `emoji: "🎵"`.
 
-**Ícones disponíveis:** `instagram`, `facebook`, `youtube`, `spotify`,
-`whatsapp`, `github`, `music`, `calendar`, `megaphone`, `mail`, `heart`,
-`globe`, `radio`, `arrowRight`.
+**Como consultar os ícones disponíveis:** abra o arquivo **`icones.html`**
+no navegador. Ele mostra o catálogo visual completo, com cada ícone já
+renderizado no estilo do site — clique em um cartão para copiar o nome.
+Depois é só colar o nome no campo `icon` dentro de `data/content.js`.
+
+Lista atual dos nomes válidos:
+
+`instagram`, `facebook`, `youtube`, `spotify`, `whatsapp`, `github`,
+`music`, `calendar`, `megaphone`, `mic`, `building`, `clipboard`, `mail`,
+`heart`, `globe`, `radio`, `arrowRight`.
+
+Se um nome inválido ou vazio for usado no lugar, o site exibe o ícone de
+globo como reserva — nada quebra.
 
 ### Alterar nome, slogan e descrição
 
@@ -138,6 +149,7 @@ como estão.
 | Quero mudar...                    | Arquivo                          |
 |----------------------------------|----------------------------------|
 | Menu, links, redes sociais, bio  | `data/content.js`                |
+| Consultar ícones disponíveis     | abra `icones.html` no navegador  |
 | Cores, fontes, espaçamentos      | `css/style.css` (variáveis em `:root`) |
 | Texto de uma página interna      | O próprio `.html` da página      |
 | Imagens                          | `assets/images/`                 |
