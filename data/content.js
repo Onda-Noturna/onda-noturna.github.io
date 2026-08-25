@@ -42,7 +42,7 @@ const SITE_DATA = {
   // Ícones disponíveis (catálogo visual: abra o arquivo icones.html):
   // instagram, facebook, youtube, spotify, whatsapp, github, music,
   // calendar, megaphone, mail, heart, globe, radio, mic, building,
-  // clipboard, arrowRight, menu, close.
+  // clipboard, star, fork, externalLink, arrowRight, menu, close.
   socials: [
     { name: "Instagram", url: "https://instagram.com/onda.noturna",          icon: "instagram" },
     //{ name: "Facebook",  url: "https://facebook.com/ondanoturna",           icon: "facebook" },

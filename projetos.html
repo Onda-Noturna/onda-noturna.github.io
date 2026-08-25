@@ -70,35 +70,44 @@
             <h3>Portal Onda Noturna</h3>
             <p>Nosso ponto de encontro digital: informações do coletivo, transparência dos projetos e tudo em HTML puro, rápido e acessível.</p>
             <div class="card-actions">
-              <a class="btn btn-secondary btn-sm" href="https://github.com/Onda-Noturna" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
+              <a class="btn btn-secondary btn-sm" href="https://onda-noturna.github.io" target="_blank" rel="noopener noreferrer">onda-noturna.github.io</a>
             </div>
           </article>
 
-          <!-- CENTRAL DE LINKS -->
-          <article class="card reveal">
-            <span class="badge-status badge-live">No ar</span>
-            <span class="card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-            </span>
-            <h3>Central de Links</h3>
-            <p>Todos os canais oficiais da Onda num endereço só — pronto para compartilhar na bio de qualquer rede social.</p>
-            <div class="card-actions">
-              <a class="btn btn-secondary btn-sm" href="./links.html">Abrir central</a>
-            </div>
-          </article>
+          
+        </div>
 
-          <!-- RÁDIO & ENCONTROS -->
-          <article class="card reveal">
-            <span class="badge-status badge-soon">Em breve</span>
-            <span class="card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/><path d="M19.1 4.9C23 8.8 23 15.2 19.1 19.1"/></svg>
-            </span>
-            <h3>Rádio &amp; Encontros Onda</h3>
-            <p>Transmissões e encontros para conectar a cena em tempo real. Está no forno — quer ajudar a definir o formato?</p>
-            <div class="card-actions">
-              <a class="btn btn-secondary btn-sm" href="./contato.html">Quero dar ideias</a>
-            </div>
-          </article>
+        <!-- PROJETOS DO GITHUB (lista dinâmica alimentada por js/projects.js) -->
+        <div class="github-repos" id="github-repos">
+          <div class="section-head" style="margin-top:3.5rem;">
+            <h2>Projetos no GitHub</h2>
+            <p>
+              Repositórios públicos da organização, ordenados pelos mais
+              recentemente atualizados — esta lista se mantém sozinha.
+            </p>
+          </div>
+
+          <div class="filter-bar" id="repo-filters" role="group" aria-label="Filtrar projetos por categoria"></div>
+
+          <div id="featured-wrap" hidden>
+            <h3 class="featured-heading">Projetos em Destaque</h3>
+            <div class="grid-cards cols-3" id="featured-grid"></div>
+          </div>
+
+          <div class="grid-cards" id="repos-grid"></div>
+
+          <div class="status-box" id="repos-loading">
+            <span class="loading-pulse">Carregando projetos da Onda Noturna...</span>
+          </div>
+
+          <div class="status-box" id="repos-error" hidden>
+            <p>Não foi possível carregar os projetos neste momento.</p>
+            <button type="button" class="btn btn-primary" id="repos-retry">Tentar novamente</button>
+          </div>
+
+          <div class="status-box" id="repos-empty" hidden>
+            <p>Nenhum projeto para mostrar por aqui.</p>
+          </div>
         </div>
 
         <div class="cta-strip reveal">
@@ -119,5 +128,6 @@
 
   <script src="./data/content.js"></script>
   <script src="./js/main.js"></script>
+  <script src="./js/projects.js"></script>
 </body>
 </html>

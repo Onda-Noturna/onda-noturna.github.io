@@ -876,6 +876,169 @@ button {
 }
 
 /* --------------------------------------------------------------------------
+   Projetos dinâmicos do GitHub (js/projects.js)
+   -------------------------------------------------------------------------- */
+
+/* Atributo hidden sempre vence (containers usam display:grid/flex) */
+[hidden] {
+  display: none !important;
+}
+
+.github-repos {
+  margin-top: 3.5rem;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter-chip {
+  padding: 0.45rem 0.95rem;
+  border: 1px solid var(--color-dark-gray);
+  border-radius: 999px;
+  background-color: var(--color-surface);
+  color: var(--color-light-80);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease,
+              background-color 0.2s ease, transform 0.2s ease;
+}
+
+.filter-chip:hover {
+  border-color: rgba(217, 4, 41, 0.55);
+  color: var(--color-light);
+  transform: translateY(-1px);
+}
+
+.filter-chip.active {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.filter-count {
+  opacity: 0.75;
+  font-weight: 500;
+  margin-left: 0.25rem;
+}
+
+.featured-heading {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.6rem;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 2.25rem 0 1rem;
+}
+
+.featured-heading::before {
+  content: "★";
+  font-size: 1.05rem;
+}
+
+/* Cartão de repositório (estende .card) */
+.repo-card {
+  gap: 0.65rem;
+}
+
+.repo-head {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.repo-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  background-color: rgba(217, 4, 41, 0.14);
+  color: var(--color-primary);
+}
+
+.repo-head h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.35rem;
+  letter-spacing: 0.03em;
+  word-break: break-word;
+}
+
+.repo-desc {
+  color: var(--color-light-80);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.repo-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag-pill {
+  padding: 0.22rem 0.6rem;
+  border: 1px solid var(--color-dark-gray);
+  border-radius: 999px;
+  background-color: #181818;
+  color: var(--color-light-60);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.repo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.85rem;
+  font-size: 0.8rem;
+  color: var(--color-light-45);
+}
+
+.repo-meta strong {
+  color: var(--color-light-80);
+  font-weight: 600;
+}
+
+.meta-star {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-primary);
+}
+
+/* Estados: carregando / erro / vazio */
+.status-box {
+  padding: 3rem 1rem;
+  text-align: center;
+  color: var(--color-light-60);
+}
+
+.status-box p {
+  margin-bottom: 1rem;
+}
+
+.loading-pulse {
+  animation: pulse-soft 1.4s ease-in-out infinite;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.45; }
+  50%      { opacity: 1; }
+}
+
+/* --------------------------------------------------------------------------
    Páginas de conteúdo (index, sobre, projetos, contato)
    -------------------------------------------------------------------------- */
 

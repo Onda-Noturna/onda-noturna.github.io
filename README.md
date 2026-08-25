@@ -31,7 +31,8 @@ build, sem banco de dados, sem servidor. Publicado direto no GitHub Pages.
 ├── css/
 │   └── style.css         # Toda a identidade visual (cores, fontes, componentes)
 ├── js/
-│   └── main.js           # Navbar, rodapé, menu mobile e página de links
+│   ├── main.js           # Navbar, rodapé, menu mobile e página de links
+│   └── projects.js       # Lista automática dos repos públicos do GitHub
 ├── data/
 │   └── content.js        # ⭐ TODO O CONTEÚDO EDITÁVEL DO SITE
 ├── assets/
@@ -78,7 +79,8 @@ Lista atual dos nomes válidos:
 
 `instagram`, `facebook`, `youtube`, `spotify`, `whatsapp`, `github`,
 `music`, `calendar`, `megaphone`, `mic`, `building`, `clipboard`, `mail`,
-`heart`, `globe`, `radio`, `arrowRight`.
+`heart`, `globe`, `radio`, `arrowRight`, `star`,
+`fork`, `externalLink`.
 
 Se um nome inválido ou vazio for usado no lugar, o site exibe o ícone de
 globo como reserva — nada quebra.
@@ -112,6 +114,25 @@ Para trocar o logo: gere novas versões a partir do novo mestre (qualquer
 redimensionador de imagem serve) ou simplesmente aponte `site.logo` em
 `data/content.js` para outro arquivo. O fallback com as iniciais "ON"
 só aparece se `site.logo` estiver vazio.
+
+## 🤖 Projetos automáticos do GitHub
+
+A página **Projetos** lista sozinha os repositórios públicos da organização
+usando a API pública do GitHub — sem chave, sem backend. Um cache leve de
+10 minutos poupa a API e mantém a página rápida.
+
+### Como gerenciar os projetos que aparecem
+
+| Objetivo | O que fazer |
+|---|---|
+| ➕ Adicionar um projeto | Crie um repositório **público** na organização e preencha descrição, topics e homepage |
+| ⭐ Destacar | Adicione o topic `featured` — ele sobe para "Projetos em Destaque" |
+| 🙈 Ocultar | Adicione o topic `hidden-from-site` — ele sai do site (o repo segue no GitHub) |
+| 🏷️ Categorizar | Use topics: `music`, `culture`, `community`, `tool`, `web`, `app`, `experimental`, `archive` |
+
+Os topics usados nas categorias viram botões de filtro na página — e só
+aparecem as categorias que estão em uso. Repositórios sem descrição ou
+linguagem aparecem normalmente, só sem aquele campo.
 
 ## ▶️ Como executar localmente
 
