@@ -34,7 +34,7 @@ build, sem banco de dados, sem servidor. Publicado direto no GitHub Pages.
 ├── data/
 │   └── content.js        # ⭐ TODO O CONTEÚDO EDITÁVEL DO SITE
 ├── assets/
-│   ├── icons/            # Favicon e ícone do app (SVG)
+│   ├── icons/            # Logo, favicon e ícone do app (PNG)
 │   └── images/           # Suas imagens (coloque aqui)
 ├── manifest.webmanifest  # Configuração de PWA/ícone
 ├── robots.txt / sitemap.xml / .nojekyll
@@ -92,8 +92,15 @@ profile: {
 }
 ```
 
-O favicon fica em `assets/icons/favicon.svg` — substitua o arquivo mantendo
-o mesmo nome para atualizar em todo o site.
+O logo oficial fica em `assets/icons/logo.png` (arquivo mestre em alta
+resolução). A partir dele são geradas as versões otimizadas usadas pelo site:
+`logo-site.png` (navbar, rodapé e página de links), `favicon.png`,
+`apple-touch-icon.png`, `icon-192.png` e `icon-512.png`.
+
+Para trocar o logo: gere novas versões a partir do novo mestre (qualquer
+redimensionador de imagem serve) ou simplesmente aponte `site.logo` em
+`data/content.js` para outro arquivo. O fallback com as iniciais "ON"
+só aparece se `site.logo` estiver vazio.
 
 ## ▶️ Como executar localmente
 
@@ -134,7 +141,7 @@ como estão.
 | Cores, fontes, espaçamentos      | `css/style.css` (variáveis em `:root`) |
 | Texto de uma página interna      | O próprio `.html` da página      |
 | Imagens                          | `assets/images/`                 |
-| Favicon / ícone                  | `assets/icons/favicon.svg`       |
+| Favicon / ícone                  | `assets/icons/logo.png` + `data/content.js`       |
 | Endereços para o Google          | `sitemap.xml` e `robots.txt`     |
 
 ## 🎨 Identidade visual

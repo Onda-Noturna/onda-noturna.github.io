@@ -220,6 +220,15 @@ button {
   white-space: nowrap;
 }
 
+/* Logo em imagem (configurado em SITE_DATA.site.logo — data/content.js) */
+.logo-img {
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+
 /* --------------------------------------------------------------------------
    Navbar (portada do Navbar.tsx — sticky, blur, menu mobile animado)
    -------------------------------------------------------------------------- */
@@ -601,8 +610,8 @@ button {
 
 .bio-avatar {
   position: relative;
-  width: 96px;
-  height: 96px;
+  width: 120px;
+  height: 120px;
   margin: 0 auto 1.25rem;
 }
 
@@ -614,8 +623,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-primary);
-  border-radius: 24px;
+  border-radius: 100px;
   color: var(--color-white);
   font-family: var(--font-display);
   font-size: 3rem;
@@ -627,7 +635,7 @@ button {
   content: "";
   position: absolute;
   inset: -6px;
-  border-radius: 30px;
+  border-radius: 100px;
   border: 2px solid rgba(217, 4, 41, 0.55);
   animation: bio-pulse 2.6s ease-out infinite;
 }

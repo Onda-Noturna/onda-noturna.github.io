@@ -59,6 +59,15 @@
     );
   }
 
+  /** Marca do logo: usa SITE_DATA.site.logo (imagem) ou as iniciais como fallback. */
+  function logoMarkHTML() {
+    if (typeof SITE_DATA === "undefined") return "";
+    const src = SITE_DATA.site && SITE_DATA.site.logo;
+    if (src) return '<img class="logo-img" src="' + src + '" alt="" aria-hidden="true">';
+    const initials = (SITE_DATA.site && SITE_DATA.site.initials) || "ON";
+    return '<span class="logo-mark">' + initials + "</span>";
+  }
+
   /** Nome do arquivo atual (ex.: "about.html"). Funciona local e no Pages. */
   function currentPage() {
     let path = window.location.pathname.split("/").pop();
@@ -85,7 +94,6 @@
       })
       .join("");
 
-    const initials = SITE_DATA.site.initials || "ON";
     const name = SITE_DATA.site.name || "Onda Noturna";
 
     mount.innerHTML =
@@ -93,7 +101,7 @@
       '<div class="container-custom">' +
       '<div class="navbar-inner">' +
       '<a class="logo" href="./index.html" aria-label="Página inicial - ' + name + '">' +
-      '<span class="logo-mark">' + initials + "</span>" +
+      logoMarkHTML() +
       '<span class="logo-text">' + name + "</span>" +
       "</a>" +
       '<div class="nav-desktop">' + items + "</div>" +
@@ -164,7 +172,7 @@
       '<div class="footer-grid">' +
       "<div>" +
       '<a class="logo" href="./index.html" aria-label="Página inicial">' +
-      '<span class="logo-mark">' + (SITE_DATA.site.initials || "ON") + "</span>" +
+      logoMarkHTML() +
       '<span class="logo-text">' + SITE_DATA.site.name + "</span></a>" +
       '<p class="footer-description">' + (SITE_DATA.site.description || "") + "</p>" +
       "</div>" +
@@ -206,7 +214,7 @@
     const avatar = document.getElementById("bio-avatar");
     if (avatar) {
       avatar.innerHTML = profile.image
-        ? '<img src="' + profile.image + '" alt="Foto de perfil de ' + profile.name + '">'
+        ? '<img src="' + profile.image + '" alt="Logo de ' + profile.name + '">'
         : '<span class="bio-avatar-mark">' + (profile.initials || "ON") + "</span>";
     }
 

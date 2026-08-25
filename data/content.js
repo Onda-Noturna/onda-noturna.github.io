@@ -12,8 +12,9 @@ const SITE_DATA = {
   // Informações gerais do site
   site: {
     name: "Onda Noturna",
-    initials: "ON", // letras exibidas no quadrado vermelho do logo
-    description: "Portal da Onda Noturna - Cultura, Música e Comunidade",
+    initials: "ON", // usado apenas como fallback se "logo" estiver vazio ""
+    logo: "./assets/icons/logo-site.png", // logo exibido na navbar e no rodapé
+    description: "Portal da Onda Noturna - Código • Cultura • Comunidade",
     url: "https://onda-noturna.github.io", // usado no robots.txt e sitemap.xml
   },
 
@@ -23,15 +24,15 @@ const SITE_DATA = {
     { label: "Sobre",        href: "./about.html" },
     { label: "Manifesto",    href: "./manifesto.html" },
     { label: "Atuação",      href: "./atuacao.html" },
-    { label: "Música",       href: "./musica.html" },
-    { label: "Eventos",      href: "./eventos.html" },
-    { label: "Rádio",        href: "./radio.html" },
+    //{ label: "Música",       href: "./musica.html" },
+    //{ label: "Eventos",      href: "./eventos.html" },
+    //{ label: "Rádio",        href: "./radio.html" },
     { label: "Projetos",     href: "./projetos.html" },
-    { label: "Labs",         href: "./labs.html" },
-    { label: "Formação",     href: "./formacao.html" },
-    { label: "Notícias",     href: "./noticias.html" },
-    { label: "Loja",         href: "./loja.html" },
-    { label: "Apoie",        href: "./apoie.html" },
+    //{ label: "Labs",         href: "./labs.html" },
+    //{ label: "Formação",     href: "./formacao.html" },
+    //{ label: "Notícias",     href: "./noticias.html" },
+    //{ label: "Loja",         href: "./loja.html" },
+    //{ label: "Apoie",        href: "./apoie.html" },
     { label: "Voluntariado", href: "./voluntariado.html" },
     { label: "Contato",      href: "./contato.html" },
     { label: "Links",        href: "./links.html" },
@@ -41,10 +42,10 @@ const SITE_DATA = {
   // Ícones disponíveis: instagram, facebook, youtube, spotify, whatsapp,
   // github, music, calendar, megaphone, mail, heart, globe, radio.
   socials: [
-    { name: "Instagram", url: "https://instagram.com/ondanoturna",          icon: "instagram" },
-    { name: "Facebook",  url: "https://facebook.com/ondanoturna",           icon: "facebook" },
-    { name: "YouTube",   url: "https://youtube.com/ondanoturna",            icon: "youtube" },
-    { name: "Spotify",   url: "https://open.spotify.com/ondanoturna",       icon: "spotify" },
+    { name: "Instagram", url: "https://instagram.com/onda.noturna",          icon: "instagram" },
+    //{ name: "Facebook",  url: "https://facebook.com/ondanoturna",           icon: "facebook" },
+    //{ name: "YouTube",   url: "https://youtube.com/ondanoturna",            icon: "youtube" },
+    //{ name: "Spotify",   url: "https://open.spotify.com/ondanoturna",       icon: "spotify" },
   ],
 
   // ========================================================================
@@ -53,12 +54,12 @@ const SITE_DATA = {
   bio: {
     profile: {
       name: "Onda Noturna",
-      tagline: "Cultura • Música • Comunidade",
-      description: "Central de links oficiais. Siga, ouça e faça parte da Onda.",
-      initials: "ON",
-      // Para usar uma foto, coloque o arquivo em assets/images/ e informe:
-      // image: "./assets/images/profile.jpg"
-      image: "",
+      tagline: "Código • Cultura • Comunidade",
+      description: "Central de links oficiais. Siga e faça parte da Onda.",
+      initials: "ON", // fallback se "image" estiver vazio ""
+      image: "./assets/icons/logo-site.png",
+      // Para usar uma foto no lugar do logo, troque o caminho acima,
+      // ex.: image: "./assets/images/profile.jpg"
     },
 
     // Botões principais da página. Cada item aceita:
@@ -69,22 +70,10 @@ const SITE_DATA = {
     //   emoji     → opcional: use um emoji no lugar do ícone
     links: [
       {
-        title: "Ouça nossa música",
-        subtitle: "Playlists e lançamentos",
-        url: "https://open.spotify.com/ondanoturna",
-        icon: "spotify",
-      },
-      {
         title: "Conheça o projeto",
         subtitle: "Site oficial da Onda",
         url: "./index.html",
         icon: "globe",
-      },
-      {
-        title: "Próximos eventos",
-        subtitle: "Agenda da Onda Noturna",
-        url: "./eventos.html",
-        icon: "calendar",
       },
       {
         title: "Fale com a gente",
@@ -93,20 +82,32 @@ const SITE_DATA = {
         icon: "mail",
       },
       {
-        title: "Apoie o projeto",
-        subtitle: "Quem sustenta a Onda",
-        url: "./apoie.html",
-        icon: "heart",
+        title: "Pesquisa I",
+        subtitle: "Cena Independente (Artistas)",
+        url: "https://docs.google.com/forms/d/e/1FAIpQLSdVl-ppkv3QgO0P7z7Dz4eI8963x9LCrG-YeK0Kp5y6jtNLSg/viewform?usp=header",
+        icon: "",
+      },
+      {
+        title: "Pesquisa II",
+        subtitle: "Cena Independente (Casas de show)",
+        url: "https://docs.google.com/forms/d/e/1FAIpQLSdK4JeufJTycCYqkh23_yFe0ZiwIgy46yaV7PA6CYvote_PAw/viewform?usp=header",
+        icon: "",
+      },
+      {
+        title: "Pesquisa III",
+        subtitle: "Cena Independente (Produtores)",
+        url: "https://docs.google.com/forms/d/e/1FAIpQLScuDsoAbMTDQd0VQGhUH9G-vFKQ90Cz3QaI9EYWZRIFO0aGeQ/viewform?usp=header",
+        icon: "",
       },
     ],
 
     // Fileira compacta de redes sociais no fim da página.
     socials: [
-      { name: "Instagram", url: "https://instagram.com/ondanoturna",    icon: "instagram" },
-      { name: "YouTube",   url: "https://youtube.com/ondanoturna",      icon: "youtube" },
-      { name: "WhatsApp",  url: "https://wa.me/5500000000000",          icon: "whatsapp" }, // TODO: troque pelo número real
-      { name: "Facebook",  url: "https://facebook.com/ondanoturna",     icon: "facebook" },
-      { name: "Spotify",   url: "https://open.spotify.com/ondanoturna", icon: "spotify" },
+      { name: "Instagram", url: "https://instagram.com/onda.noturna",    icon: "instagram" },
+     // { name: "YouTube",   url: "https://youtube.com/ondanoturna",      icon: "youtube" },
+     // { name: "WhatsApp",  url: "https://wa.me/5500000000000",          icon: "whatsapp" }, // TODO: troque pelo número real
+     // { name: "Facebook",  url: "https://facebook.com/ondanoturna",     icon: "facebook" },
+     // { name: "Spotify",   url: "https://open.spotify.com/ondanoturna", icon: "spotify" },
       { name: "GitHub",    url: "https://github.com/Onda-Noturna",      icon: "github" },
     ],
   },
