@@ -14,7 +14,7 @@ const SITE_DATA = {
     name: "Onda Noturna",
     initials: "ON", // usado apenas como fallback se "logo" estiver vazio ""
     logo: "./assets/icons/logo-site.png", // logo exibido na navbar e no rodapé
-    description: "Portal da Onda Noturna - Código • Cultura • Comunidade",
+    description: "Portal da Onda Noturna - Tecnologia • Cultura • Educação",
     url: "https://onda-noturna.github.io", // usado no robots.txt e sitemap.xml
   },
 
@@ -56,7 +56,7 @@ const SITE_DATA = {
   bio: {
     profile: {
       name: "Onda Noturna",
-      tagline: "Código • Cultura • Comunidade",
+      tagline: "Tecnologia • Cultura • Educação",
       description: "Central de links oficiais. Siga e faça parte da Onda.",
       initials: "ON", // fallback se "image" estiver vazio ""
       image: "./assets/icons/logo-site.png",

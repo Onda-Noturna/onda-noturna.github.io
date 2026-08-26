@@ -1059,6 +1059,7 @@ button {
 
 .lead,
 .section-head p {
+  text-align: justify;
   color: var(--color-light-80);
   font-size: 1.125rem;
   line-height: 1.65;
