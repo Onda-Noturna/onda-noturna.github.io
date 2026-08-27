@@ -83,7 +83,7 @@ Lista atual dos nomes válidos:
 `fork`, `externalLink`.
 
 Se um nome inválido ou vazio for usado no lugar, o site exibe o ícone de
-globo como reserva — nada quebra.
+globo como reserva.
 
 ### Alterar nome, slogan e descrição
 
@@ -118,7 +118,7 @@ só aparece se `site.logo` estiver vazio.
 ## 🤖 Projetos automáticos do GitHub
 
 A página **Projetos** lista sozinha os repositórios públicos da organização
-usando a API pública do GitHub — sem chave, sem backend. Um cache leve de
+usando a API pública do GitHub (sem chave e sem backend). Um cache leve de
 10 minutos poupa a API e mantém a página rápida.
 
 ### Como gerenciar os projetos que aparecem
@@ -130,7 +130,7 @@ usando a API pública do GitHub — sem chave, sem backend. Um cache leve de
 | 🙈 Ocultar | Adicione o topic `hidden-from-site` — ele sai do site (o repo segue no GitHub) |
 | 🏷️ Categorizar | Use topics: `music`, `culture`, `community`, `tool`, `web`, `app`, `experimental`, `archive` |
 
-Os topics usados nas categorias viram botões de filtro na página — e só
+Os topics usados nas categorias viram botões de filtro na página e só
 aparecem as categorias que estão em uso. Repositórios sem descrição ou
 linguagem aparecem normalmente, só sem aquele campo.
 
@@ -180,7 +180,7 @@ como estão.
 ## 🎨 Identidade visual
 
 - **Cores:** fundo `#090909` · primária `#D90429` · texto `#F5F5F5`
-- **Fontes:** Bebas Neue (títulos) · Inter (texto) — carregadas via Google Fonts
+- **Fontes:** Bebas Neue (títulos) · Inter (texto) carregadas via Google Fonts
 - Paleta e tipografia ficam nas variáveis CSS em `:root`, no topo de `style.css`.
 
 ## 📄 Licença
