@@ -85,7 +85,7 @@ const SITE_DATA = {
       },
       {
         title: "Pesquisa I",
-        subtitle: "Cena Independente (Artistas)",
+        subtitle: "Cena Independente (Artistas/Bandas)",
         url: "https://docs.google.com/forms/d/e/1FAIpQLSdVl-ppkv3QgO0P7z7Dz4eI8963x9LCrG-YeK0Kp5y6jtNLSg/viewform?usp=header",
         icon: "mic",
       },
